@@ -1,5 +1,11 @@
 /* ===== GOOGLE FONTS ===== */
 
+html,
+body{
+overflow-x:hidden;
+width:100%;
+}
+
 *{
 margin:0;
 padding:0;
@@ -402,7 +408,6 @@ font-weight:600;
 
 .featured{
 border:1px solid var(--primary);
-transform:scale(1.05);
 }
 
 /* ===== FAQ ===== */
@@ -656,40 +661,97 @@ font-size:3.5rem;
 display:block;
 }
 
+/* Mobile Menu */
 .nav-links{
 display:none;
+position:absolute;
+top:80px;
+left:0;
+width:100%;
+background:#10172f;
+flex-direction:column;
+align-items:center;
+padding:20px 0;
+gap:20px;
+z-index:1000;
+}
+
+.nav-links.active{
+display:flex;
+}
+
+/* Layout Fix */
+.hero,
+.about,
+.contact-wrapper{
+grid-template-columns:1fr;
 }
 
 .games-grid,
 .setup-grid,
 .pricing-grid,
+.reviews-container,
 .footer-container{
 grid-template-columns:1fr;
 }
 
-.hero{
-text-align:center;
+.brands{
+grid-template-columns:1fr;
 }
 
-.hero-buttons{
-justify-content:center;
-flex-wrap:wrap;
+/* Hero */
+.hero{
+padding:120px 20px 60px;
+text-align:center;
+gap:30px;
 }
 
 .hero-content h1{
-font-size:2.8rem;
-}
-
-.about-content h2{
 font-size:2.2rem;
+line-height:1.2;
+word-break:break-word;
 }
 
-.section-title h2{
+.hero-content p{
+font-size:1rem;
+}
+
+/* Buttons */
+.hero-buttons{
+flex-direction:column;
+align-items:center;
+gap:15px;
+}
+
+.btn{
+width:100%;
+max-width:250px;
+}
+
+/* Images */
+.hero-image img,
+.about-image img{
+width:100%;
+height:auto;
+}
+
+/* Headings */
+.about-content h2{
 font-size:2rem;
 }
 
+.section-title h2{
+font-size:1.8rem;
+}
+
+/* Newsletter */
 .newsletter-form input{
 width:100%;
+}
+
+/* Logo */
+.logo{
+font-size:1.3rem;
 }
 
 }
